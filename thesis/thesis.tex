@@ -1,0 +1,58 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=1.5in]{geometry}
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% Maths packages
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand*\mean[1]{\bar{#1}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\usepackage {tikz}
+\usetikzlibrary {positioning}
+
+% Code snippet package setup
+\usepackage{minted}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+\usepackage{natbib}
+
+% TODOs
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}\PackageWarning{TODO:}{#1!}}
+
+\begin{document}
+\title{\small Honours Thesis\\\huge Generating Clinical Queries from Patient Narratives}
+
+\author{Liam Cripwell - 08857181\\liam.cripwell@connect.qut.edu.au\\\\\small Supervisor - Guido Zuccon\\\small g.zuccon@qut.edu.au\\}
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Query Reduction}
+\subsection{Health-Terms Model}
+\subsection{Key-Concept Model}
+\subsection{Concept-Based Retrieval Model}
+
+\section{Query Expansion}
+\subsection{Pseudo-Relevance Feedback}
+\subsection{HT+PRF Model}
+\subsection{Graph INference Model}
+
+
+\bibliographystyle{plain}
+\bibliography{../mybib}
+\end{document}

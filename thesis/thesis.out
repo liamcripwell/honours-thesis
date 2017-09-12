@@ -1,0 +1,8 @@
+\BOOKMARK [1][-]{section.1}{Query Reduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Health-Terms Model}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Key-Concept Model}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Concept-Based Retrieval Model}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Query Expansion}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Pseudo-Relevance Feedback}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{HT+PRF Model}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Graph INference Model}{section.2}% 8
