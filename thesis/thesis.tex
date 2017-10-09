@@ -42,7 +42,31 @@
 \tableofcontents
 \pagebreak
 
+\section{Data Collection}
+\subsection{Patient Narratives}
+\subsection{Document Corpi}
+\subsection{Evaluation Pipeline}
+
 \section{Query Reduction}
+Balasubramanian et al.~\citep{Balasubramanian:2010:ERL:1835449.1835545} provide a formal definition of the query reduction task to find the set $P^*$:
+
+\begin{equation}
+\begin{split}
+P^* &= \argmax_{P\in \mathcal{P}^Q} T_f(P),
+\end{split}
+\end{equation}
+
+where $Q$ is the original query, $\mathcal{P}^Q$ is the set of possible subqueries of $Q$, and $T_f$ is the measure of retrieval effectiveness for a given query. However, because it is not viable to calculate $T_f$ for every $P$, estimations must be made; this gives us the revised definition of $P^*$:
+
+\begin{equation}
+\label{QRdefinition}
+\begin{split}
+P^* &= \argmax_{P\in \mathcal{P}^Q} \widehat{T_f}(P)
+\end{split}
+\end{equation}
+
+The query reduction task thus becomes the problem of finding an effective method of estimating values of $T_f$ in order to produce the best possible value of $P^*$.
+
 \subsection{Health-Terms Model}
 
 This query reduction model utilises a Wikipedia dump in order to calculate term weights. Each Wikipedia page has been classified as either \textit{health-related} or \textit{non-health-related} depending on whether or not their \textit{infobox} contains one or more UMLS medical concepts, respectively. 
@@ -62,11 +86,10 @@ A term is retained as part of the generated reduction if $OR(c_l) \geq \delta$, 
 \subsection{Concept-Based Retrieval Model}
 
 \section{Query Expansion}
-\subsection{Pseudo-Relevance Feedback}
 Various PRF models have been investigated, namely; Kullback-Leibler Divergence, Rocchio.
 
-We experimented with the performance of these methods within the context of the clinical trials document collection. PRF functionality was applied to the existing UMLS reduction model in order to identify additional terms that may be relavent given the retrieval results of the UMLS reduced queries. Experiments were run with the number of pseudo-documents $k$ set to 3, 5, and 7, and for each of these the number of pseudo-relevant expansion terms $j$ was set to values between 1 and 15, in increments of 2.
-
+\subsection{Pseudo-Relevance Feedback}
+\subsubsection{Kullback-Leibler Divergence PRF Model}
 The Kullback-Leibler formula used to score expansion term candidates is as follows:
 
 \begin{equation}
@@ -78,6 +101,7 @@ p(t|R) \cdot \log{\frac{p(t|R)}{p(t|C)}},
 
 where $p(t|R)$ and $p(t|C)$ are the probability of term $t$ occurring in the set of pseudo-relevant documents $R$ and entire document collection $C$, respectively.
 
+\subsubsection{Rocchio PRF Model}
 \todo{rephrase this as the rocchio model and remove medical components.}
 Soldaini et al.~\cite{Soldaini2015RetrievingML} adopted a variation of PRF in their investigation of CDS search tasks, whereby instead of altering the term weights, they determined boosting coefficients for each term. This difference is fairly trivial, but was done in order to fit their specific experimental setup. They expand the query by building the root set $\mathcal{R}_Q$, which consists of the union of the set containing all the terms in the query $Q$ with the set of all the terms in the top-$k$ documents returned for $Q$. The boost coefficient $b_j$ is then calculated for $t_j \in \mathcal{R}_Q$ as: $$b_j = \log_{10}(10+w_j)$$
 
@@ -91,8 +115,14 @@ where
 
 and where $I_Q(t_j)$ is an indicator of the presence of term $t_j$ in $Q$; $I_{D_i}(t_j)$ is an indicator of the presence of term $t_j$ in the document $D_i$; $idf_j$ is the inverse document frequency of the $j$-th term in the top $k$ documents; and $\alpha$ and $\beta$ are smoothing factors. Once all weights have been calculated, the terms in $\mathcal{R}_Q$ are ranked by their boost coefficient and the top $m$ terms are added to the query. The following parameter values were used: $\alpha = 2$, $\beta = 0.75$, $k = 10$, $m = 20$.
 
-\subsection{HT+PRF Model}
+\subsubsection{Health-Terms PRF Model}
 
+
+\subsubsection{Health-Terms+Rocchio PRF Model}
+This model follows the \textit{HT+PRF} model described by Soldaini~\cite{}.
+
+\subsection{Method}
+We experimented with the performance of these methods within the context of the clinical trials document collection. PRF functionality was applied to the existing UMLS reduction model in order to identify additional terms that may be relavent given the retrieval results of the UMLS reduced queries. Experiments were run with the number of pseudo-documents $k$ set to 3, 5, and 7, and for each of these the number of pseudo-relevant expansion terms $j$ was set to values between 1 and 15, in increments of 2.
 
 \bibliographystyle{plain}
 \bibliography{../mybib}

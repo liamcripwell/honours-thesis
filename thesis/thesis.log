@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.25)  7 OCT 2017 15:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.25)  9 OCT 2017 13:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -743,39 +743,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [2]
 
+Package natbib Warning: Citation `Balasubramanian:2010:ERL:1835449.1835545' on 
+page 3 undefined on input line 51.
+
+
 Package TODO: Warning: investigate what methods jimmy used to identify medical 
-concepts! on input line 49.
-
-
-Package TODO: Warning: rephrase this as the rocchio model and remove medical co
-mponents.! on input line 81.
-
-
-Package natbib Warning: Citation `Soldaini2015RetrievingML' on page 3 undefined
- on input line 82.
+concepts! on input line 73.
 
 [3]
+
+Package TODO: Warning: rephrase this as the rocchio model and remove medical co
+mponents.! on input line 105.
+
+
+Package natbib Warning: Citation `Soldaini2015RetrievingML' on page 4 undefined
+ on input line 106.
+
 No file thesis.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
 [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D5755B883CC1B06215C6E6DFC2CE7E76;446.
+(rerunfilecheck)             Checksum: 8CDF0A18060FC94C0DAF16C3769CF33A;1036.
  ) 
 Here is how much of TeX's memory you used:
- 17289 strings out of 494985
- 293879 string characters out of 6180356
- 390907 words of memory out of 5000000
- 20162 multiletter control sequences out of 15000+600000
+ 17309 strings out of 494985
+ 294229 string characters out of 6180356
+ 389959 words of memory out of 5000000
+ 20172 multiletter control sequences out of 15000+600000
  12447 words of font info for 48 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,18n,55p,813b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,18n,55p,813b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -787,11 +791,12 @@ public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (4 pages, 154315 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on thesis.pdf (4 pages, 171797 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 16 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
