@@ -1,2 +1,3 @@
 # honours-thesis
-Documents relating to Liam's honours thesis
+
+My 2017 honours thesis.
